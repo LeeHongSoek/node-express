@@ -9,39 +9,6 @@ var usersRouter = require('./routers/users');
 
 var app = express();
 
-
-const ws = require('ws'); // npm install ws
-
-// Create a new Express app.
-const appws = express();
-
-// Create a new WebSocket server.
-const wss = new ws.Server({
-  server: appws.listen(80)
-});
-
-// Handle WebSocket connections.
-wss.on('connection', (ws) => {
-  // Send a message to the client.
-  ws.send('Hello, client!');
-
-  // Listen for messages from the client.
-  ws.on('message', (message) => {
-    console.log('Received message from client:', message);
-  });
-});
-
-// Start the server.
-appws.listen(80, () => {
-  console.log('Server started on port 80');
-});
-
-
-
-
-
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
