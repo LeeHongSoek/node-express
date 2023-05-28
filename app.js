@@ -1,5 +1,5 @@
-const express = require('express');
-const ws = require('ws');
+const express = require('express'); // npm install express
+const ws = require('ws'); // npm install ws
 
 // Create a new Express app.
 const app = express();
