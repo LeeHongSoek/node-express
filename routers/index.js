@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log('./routers/index 라우팅');
+  console.log('라우팅 : ./routers/index');
   res.render('index', { title: '자동업데이트 확인!' });
 });
 
